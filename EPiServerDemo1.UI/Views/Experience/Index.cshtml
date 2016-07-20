@@ -1,0 +1,24 @@
+﻿
+@model EPiServerDemo1.UI.Models.Blocks.Experience
+
+@{
+
+    Layout = null;
+}
+
+<div class="col-md-4">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>Name Of Employer:</th>
+            <td>@Html.DisplayFor(m => m.EmployerName)</td>
+        </tr>
+        <tr>
+            <th>Work Duration:</th>
+            <td>@Html.DisplayFor(m => m.WorkDuration)</td>
+        </tr>
+        <tr>
+            <th>Designation:</th>
+            <td>@Html.DisplayFor(m => m.Designation)</td>
+        </tr>
+    </table>
+</div>

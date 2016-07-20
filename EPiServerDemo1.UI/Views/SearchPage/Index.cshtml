@@ -1,0 +1,51 @@
+﻿@using EPiServerDemo1.UI.Models.ViewModels
+@using EPiServer.Editor
+@using EPiServer.Security
+
+@model SearchContentModel
+<style>
+
+    .listResult{
+
+        border-bottom:solid 1px #ccc;
+    }
+</style>
+
+@if (Model.Hits != null)
+{
+    <div class="container">
+        <a onclick="window.history.back()" href="#">Back</a>
+        <div class="">
+            <h2>@Html.Translate("/searchpagetemplate/result")</h2>
+            <p>
+
+              
+                @if (Model.NumberOfHits > 0)
+                {
+                    @: Showing  @Model.NumberOfHits result(s) for <strong> <i>@Model.SearchedQuery</i></strong>
+                }
+                else
+                {
+                    @Html.Translate("/searchpagetemplate/zero")
+                }
+                
+            </p>
+        </div>
+
+
+        <div class="row">
+            <div>
+                
+                    @foreach (var hit in Model.Hits)
+                    {
+                        <div class="listResult"></div>
+                                    <h4><a href="@hit.Url" target="_blank">@hit.Title</a></h4>
+                                
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@hit.Excerpt</p>
+                       
+                    }
+                
+            </div>
+        </div>
+    </div>
+}

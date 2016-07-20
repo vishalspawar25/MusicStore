@@ -1,0 +1,92 @@
+﻿@using EPiServerDemo1.UI.Models.ViewModels
+@using EPiServer.Editor
+@using EPiServer.Security
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/jpeg" href="~/Static/music.jpg" sizes="96x96" />
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+
+    <script>
+
+function setlanguage(id) {
+
+                     var selLang=$('#'+id).val();
+                    var s=window.location.href;
+                    var o='';
+                        if(selLang=='hi-IN')
+                        {
+                        o=s.replace("en","hi-IN");
+                        }
+                        else
+                        {
+                        o=s.replace("hi-IN", "en");
+                        }
+                    window.location=o;
+    }
+
+$(function() {
+var url=window.location.href;
+console.log(window.location.pathname);
+if (window.location.pathname=='/')
+{
+window.location.href=url+"en";
+}
+
+
+  if (url.indexOf("hi-IN") >= 0)
+    {
+    $('#ddlLanguage').val("hi-IN");
+    }
+else
+    {
+    $('#ddlLanguage').val("en");
+    }
+});
+</script>
+</head>
+<body style="background-color:#faf6f6">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://episerverdemo.local/" style="color:#fff">Music Store</a>
+            </div>
+            <ul class="navbar-brand" style="float:right">
+               
+                    @{
+                        using (Html.BeginForm(null, null, FormMethod.Get, new { @action = "/en/search",@class="form-inline"  }))
+                        {
+                            <input type="text" tabindex="1" name="q" class="form-control" placeholder="@Html.Translate("/searchpagetemplate/searchtext")"/>
+                            <input type="submit" tabindex="2" class="btn btn-success" value="@Html.Translate("/searchpagetemplate/searchbutton")" />
+
+                        }
+                    }
+
+               
+            </ul>
+
+   
+<div class="navbar-brand" style="float:right"><select class="form-control" id="ddlLanguage" name="ddlLanguage" onchange="setlanguage(this.id)">
+<option value="en">English</option>
+<option value="hi-IN">Hindi</option>
+
+</select>
+        </div> </nav>
+    <div style="border:solid" class="row">
+
+      @Html.Partial("~/Views/Shared/_header.cshtml")
+    </div>
+   <h1 style="text-align:center" >@ViewBag.title</h1>
+  
+    <div> 
+        @RenderBody()
+    </div>
+
+</body>
+<script src="~/Scripts/bootstrap.min.js"></script>
+</html>

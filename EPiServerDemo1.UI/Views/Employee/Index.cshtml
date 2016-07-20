@@ -1,0 +1,56 @@
+﻿@using EPiServer
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model EPiServerDemo1.UI.Models.Pages.Employee
+
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+    ViewBag.title = "Employee Details";
+
+    List<EPiServer.SpecializedProperties.LinkItem> ls = Model.LinkItems.ToList();
+   
+
+}
+
+<div class="col-md-12">
+    <ul>
+
+        @foreach (var item in ls)
+        {
+            <li>
+             
+                <a href="@Url.ContentUrl(item.Href)" target="@item.Target">@item.Title</a>
+            </li>
+            
+        }
+    </ul>
+    
+</div>
+<div class="container col-md-6">
+    <legend>Personal Details:</legend>
+    <table class="table table-bordered ">
+        <tr>
+            <th>Name:</th>
+            <td  @Html.EditAttributes(x => x.EmployeeName)>@Html.DisplayFor(m => m.EmployeeName)</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td @Html.EditAttributes(x => x.Email)>@Html.DisplayFor(m => m.Email)</td>
+        </tr>
+        <tr>
+            <th>Mobile:</th>
+            <td @Html.EditAttributes(x => x.Mobile)>@Html.DisplayFor(m => m.Mobile)</td>
+        </tr>
+        <tr>
+            <th>Skills:</th>
+            <td @Html.EditAttributes(x => x.Skills)>@Html.DisplayFor(m => m.Skills)</td>
+        </tr>
+    </table>
+
+
+</div>
+<div class="container col-md-12" @Html.EditAttributes(x => x.ExperienceContentArea)>
+    <legend>Experience Summary:</legend>
+    @Html.PropertyFor(m => m.ExperienceContentArea)
+</div>

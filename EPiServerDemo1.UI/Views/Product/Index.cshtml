@@ -1,0 +1,57 @@
+﻿@using EPiServer.ServiceLocation;
+@using EPiServer.DataAbstraction;
+@model EPiServerDemo1.UI.Models.Pages.Product
+
+@{
+    ViewBag.Title = Model.SongTitle;
+    Layout = "~/Views/Shared/_layout.cshtml";
+    CategoryRepository categoryRepository = ServiceLocator.Current.GetInstance<CategoryRepository>();
+    Category c = categoryRepository.Get(Convert.ToInt32(Model.Category.ToString()));
+
+    string genre = c.Name;
+}
+
+<h2></h2>
+<img src="~/Static/music_logo.png" class="col-md-3 img-rounded "/>
+<div class="col-md-6">
+    <table class="table table-bordered">
+
+        <tr>
+            <th>@Html.Translate("/songdescription/title")</th>
+            <td @Html.EditAttributes(x => x.SongTitle)>
+                @Html.DisplayFor(m => m.SongTitle)
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.Translate("/songdescription/singer")</th>
+            <td  @Html.EditAttributes(x => x.Singer)>
+                @Html.DisplayFor(m => m.Singer)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.Translate("/songdescription/genre")
+            </th>
+            <td>@genre</td>
+        </tr>
+        <tr>
+            <th>@Html.Translate("/songdescription/description")</th>
+            <td  @Html.EditAttributes(x => x.Description)>@Html.DisplayFor(m => m.Description)</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><a href="#">@Html.Translate("/songdescription/download")</a></td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+    <audio controls="controls">
+        <source src="~/Static/Kalimba.mp3" type="audio/mpeg" />
+    </audio>
+</div>

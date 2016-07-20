@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "My Custom Plugin";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<h2></h2>
+
+@using (Html.BeginForm("Index", "MyCustomPlugin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+    {<fieldset>
+    <legend>Add</legend>
+         <table>
+             <tr>
+                 <td> Choose XML File:</td>
+                 <td> <input type="file" id="fileToUpload" name="file" /></td>
+
+                 <td></td>
+                 <td><input type="submit" id="btnSubmit" value="Upload" /></td>
+             </tr>
+         </table>
+
+    </fieldset>
+      
+       
+       
+    }
+
+
+
+@using (Html.BeginForm("Delete", "MyCustomPlugin", FormMethod.Post))
+
+{
+    <fieldset>
+        <legend>Delete</legend>
+        <input type="submit" id="btnDelete" value="Delete Products" />
+        </fieldset>
+
+
+
+        }
+
+<h3 class="text-danger">@ViewBag.message</h3>

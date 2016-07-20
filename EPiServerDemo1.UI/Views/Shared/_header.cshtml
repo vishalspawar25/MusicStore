@@ -1,0 +1,30 @@
+﻿
+@using EPiServer.ServiceLocation;
+@using EPiServer;
+@using EPiServer.Core;
+@using EPiServer.Web;
+@using EPiServerDemo1.UI.Models.Pages
+@{
+
+
+    @*IContentRepository contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
+    EPiServerDemo1.UI.Models.Pages.StartPage startPage =  contentRepository.Get<EPiServerDemo1.UI.Models.Pages.StartPage>(SiteDefinition.Current.StartPage);
+    var emp = contentRepository.Get<Employee>(startPage.HeaderPageReference);
+    List<EPiServer.SpecializedProperties.LinkItem> ls = emp.LinkItems.ToList();
+
+
+    <div class="col-md-12">
+        <ul>
+
+            @foreach (var item in ls)
+            {
+                <li>
+
+                    <a href="@Url.ContentUrl(item.Href)" target="@item.Target">@item.Title</a>
+                </li>
+
+            }
+        </ul>
+
+    </div>*@
+}

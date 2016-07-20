@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  <language name="English" id="en">
+    
+    <searchpagetemplate>
+      <zero>No result found!</zero>
+      <result>Search result</result>
+      <searchbutton>Search</searchbutton>
+      <searchtext>Search music store </searchtext>
+    </searchpagetemplate>
+    
+    <songdescription>
+      <title>Title</title>
+      <singer>Singer</singer>
+      <genre>Genre</genre>
+      <description>Description</description>
+      <download>Download</download>
+    </songdescription>
+    <songcatalog>
+      <title>songs</title>
+      <selectgenre>Select Genre</selectgenre>
+    </songcatalog>
+  </language>
+  
+  <language name="हिंदी (भारत)" id="hi-IN">
+    
+    <searchpagetemplate>
+      <zero>कोई रिकॉर्ड नहीं मिला!</zero>
+      <result>ख़ोज रिकॉर्ड</result>
+      <searchbutton>ख़ोज</searchbutton>
+      <searchtext>म्यूजिक स्टोर ख़ोज </searchtext>
+    </searchpagetemplate>
+      
+    <songdescription>
+      <title>शीर्षक</title>
+      <singer>गायक</singer>
+      <genre>शैली</genre>
+      <description>वर्णन</description>
+      <download>डाउनलोड</download>
+    </songdescription>
+    <songcatalog>
+      <title>गीत</title>
+      <selectgenre>शैली चुनें </selectgenre>
+    </songcatalog>
+  </language>
+</languages>

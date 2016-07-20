@@ -1,0 +1,75 @@
+﻿@model EPiServerDemo1.UI.Models.ViewModels.ProductCatalogViewModel
+
+@{
+    ViewBag.Title = @Html.Translate("/songcatalog/title");
+    Layout = "~/Views/Shared/_layout.cshtml";
+
+
+}
+<script type="text/javascript">
+
+    function setURL(pagename) {
+
+        var url = window.location.href + '/@Model.ParentURL/' + pagename
+        window.open(url);
+    }
+
+    function get() {
+console.log('2');
+        $('#frm').submit();
+
+
+    }
+
+</script>
+<style>
+    .thumbnail {
+        width: 250px;
+        float: left;
+        margin: 5px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.5);
+        cursor: pointer;
+    }
+        .thumbnail:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.8);
+        }
+    .music {
+        height: 100px;
+        width: 100px;
+        margin: 5px 0;
+    }
+</style>
+<div class="container">
+    @using (Html.BeginForm("Index", "StartPage", FormMethod.Post, new { @Id = "frm" }))
+
+    {
+        <div class="form-inline">
+            <div class="form-group">
+                <label> @Html.Translate("/songcatalog/selectgenre"):</label>
+                @Html.DropDownList("ddlGenre", Model.LstCategories, new { id = "ddlCategories", @class = "form-control", onchange = "get()" })
+
+
+                <input type="submit" value="Go" class="btn btn-success hide" />
+            </div>
+        </div>
+        <h1></h1>
+
+
+        foreach (var item in Model.listProduct)
+        {
+
+
+            <a onclick="setURL('@item.URLSegment')">
+                <div class="thumbnail">
+                    <img src="~/Static/music.jpg" class="music" />
+                    <div style="color:#fff;background-color:#000;text-align:justify;padding-left:3px">
+                        @item.SongTitle
+                    </div>
+                </div>
+            </a>
+
+
+        }
+
+    }
+</div>
