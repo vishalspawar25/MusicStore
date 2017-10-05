@@ -1,39 +1,111 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Products>
-  <Product Id="P0001" PageName="The Mask">
-    <Name>The Mask (Serial)</Name>
+  <Product Id="P0001" PageName="tum-hi-ho">
+    <Name>Tum hi ho (Ashiqui 2)</Name>
     <Categories>
-      <Category Type="Genre">Action</Category>
-      <Category Type="MovieTypes">SerialAnimation</Category>
+      <Category Type="Genre">Bollywood Hits</Category>      
     </Categories>
-    <Description>The mask</Description>
-    <Price>101.00</Price>
+    <Description>Ashiqui 2</Description>
+    <Singer>Arijit Singh</Singer>
   </Product>
-  <Product Id="P0002" PageName="Popeye">
-    <Name>Popeye (Serial)</Name>
+
+  <Product Id="P0002" PageName="bariyan">
+    <Name>Bariyan (Ramaiya Vastavaiya)</Name>
     <Categories>
-      <Category Type="Genre">Comedy</Category>
-      <Category Type="MovieTypes">SerialAnimation</Category>
+      <Category Type="Genre">Bollywood Hits</Category>
     </Categories>
-    <Description>The Popeye</Description>
-    <Price>120.00</Price>
+    <Description>Ramaiya Vastavaiya</Description>
+    <Singer>Atif  Aslam ,Shreya Ghoshal</Singer>
   </Product>
-  <Product Id="P0003" PageName="Supernaturals">
-    <Name>Supernaturals (Serial)</Name>
+
+  <Product Id="P0003" PageName="bat-niklegi">
+    <Name>Baat Niklegi Toh Phir </Name>
     <Categories>
-      <Category Type="Genre">Horrer</Category>
-      <Category Type="MovieTypes">SerialLivePicture</Category>
+      <Category Type="Genre">Gazals</Category>
     </Categories>
-    <Description>Supernatural</Description>
-    <Price>101.00</Price>
+    <Description>Baat Niklegi Toh Phir  by Jagjit Singh</Description>
+    <Singer>Jagjit Singh</Singer>
   </Product>
-  <Product Id="P0004" PageName="Oceans 11">
-    <Name>Oceans 11</Name>
+
+  <Product Id="P0004" PageName="zindagi-jabbhi-teri-bazm-mein">
+    <Name>Zindagi Jabbhi Teri Bazm Mein</Name>
     <Categories>
-      <Category Type="Genre">Drama</Category>
-      <Category Type="MovieTypes">Movie-Live-Picture</Category>
+      <Category Type="Genre">Gazals</Category>
     </Categories>
-    <Description>Oceans 11</Description>
-    <Price>101.00</Price>
+    <Description>Zindagi Jabbhi Teri Bazm Mein by Talat Aziz </Description>
+    <Singer>Talat Aziz (Umrao Jaan)</Singer>
   </Product>
+  
+  <Product Id="P0005" PageName="aaj-jaane-ki-zidd-na-karo">
+    <Name>Aaj Jaane ki Zidd Na Karo </Name>
+    <Categories>
+      <Category Type="Genre">Gazals</Category>
+    </Categories>
+    <Description>Aaj Jaane ki Zidd Na Karo by Farida Khanum </Description>
+    <Singer>Farida Khanum</Singer >
+  </Product>
+
+  <Product Id="P0006" PageName="work">
+    <Name>Work</Name>
+    <Categories>
+      <Category Type="Genre">Hip Hop</Category>
+    </Categories>
+    <Description>Work by Rihanna Featuring Drake </Description>
+    <Singer>Rihanna Featuring Drake</Singer >
+  </Product>
+
+  <Product Id="P0007" PageName="dont-mind">
+    <Name>Dont Mind</Name>
+    <Categories>
+      <Category Type="Genre">Hip Hop</Category>
+    </Categories>
+    <Description>Don't Mind by Kent Jones </Description>
+    <Singer>Kent Jones</Singer >
+  </Product>
+
+  <Product Id="P0008" PageName="sorry">
+    <Name>Sorry</Name>
+    <Categories>
+      <Category Type="Genre">Hip Hop</Category>
+    </Categories>
+    <Description>Sorry by Beyonce</Description>
+    <Singer>Beyonce</Singer >
+  </Product>
+
+  <Product Id="P0009" PageName="mai-pal-do-pal-ka">
+    <Name>Main pal do pal ka(Kabhi kabhi)</Name>
+    <Categories>
+      <Category Type="Genre">Classic Melody</Category>
+    </Categories>
+    <Description>Main pal do pal ka by Mukesh</Description>
+    <Singer>Mukesh kumar</Singer >
+  </Product>
+  
+  <Product Id="P0010" PageName="deewana-hua-badal">
+    <Name>Deewana hua badal(Kashmir ki kali)</Name>
+    <Categories>
+      <Category Type="Genre">Classic Melody</Category>
+    </Categories>
+    <Description>Deewana hua badal by Mohammad Rafi</Description>
+    <Singer>Mohammad Rafi</Singer >
+  </Product>
+
+  <Product Id="P0011" PageName="dekha-ek-khwab">
+    <Name> Dekha Ek Khwab(SilSila)</Name>
+    <Categories>
+      <Category Type="Genre">Classic Melody</Category>
+    </Categories>
+    <Description>Dekha Ek Khwab by Lata Mangeshkar</Description>
+    <Singer>Lata Mangeshkar</Singer >
+  </Product>
+  
+  <Product Id="P0012" PageName="ajib-dastan-hai-ye">
+    <Name> Ajeeb dastan hai yeh</Name>
+    <Categories>
+      <Category Type="Genre">Classic Melody</Category>
+    </Categories>
+    <Description> Ajeeb dastan hai yeh by Lata Mangeshkar</Description>
+    <Singer>Lata Mangeshkar</Singer >
+  </Product>
+ 
 </Products>
